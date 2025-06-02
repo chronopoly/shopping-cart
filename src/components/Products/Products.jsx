@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import styles from "./Products.module.css";
 
-const Products = () => {
+const Products = ({ handleCartUpdate }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Products = () => {
     <>
       <h1>This is a page with products</h1>
       <div className={styles.productContainer}>
-        {products.map(product => <ProductCard info={product} key={product.id}/>)}
+        {products.map(product => <ProductCard info={product} key={product.id} handleCartUpdate={handleCartUpdate}/>)}
       </div>
     </>
   )

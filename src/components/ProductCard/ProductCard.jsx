@@ -3,14 +3,23 @@ import { useState } from "react";
 import Counter from "../Counter/Counter";
 import styles from "./ProductCard.module.css";
 
-const ProductCard = ({ info }) => {
+const ProductCard = ({ info, handleCartUpdate }) => {
   const [itemQuantity, setItemQuantity] = useState(1);
   
+  const handleButtonClick = () => {
+    console.log(itemQuantity);
+    const newItem = {
+      id: info.id,
+      quantity: itemQuantity};
+    handleCartUpdate(newItem);
+  }
+
   return (
     <div className={styles.card}>
       <img src={info.image} alt="picture of a product" />
       <p>{info.title}</p>
       <Counter quantity={itemQuantity} setQuantity={setItemQuantity} />
+      <button onClick={handleButtonClick}>Add to cart</button>
     </div>
   )
 };

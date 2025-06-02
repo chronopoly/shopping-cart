@@ -5,13 +5,12 @@ import Cart from './components/Cart/Cart'
 
 const routes = [
   {
-    path: '/',
+    path: "/",
+    element: <App />
+  },
+  {
+    path: '/:name',
     element: <App />,
-    children: [
-      {index: true, element: <Homepage />},
-      {path: 'products', element: <Products />},
-      {path: 'cart', element: <Cart />}
-    ]
   },
 ];
 

@@ -13,7 +13,7 @@ const Counter = ({ quantity, setQuantity }) => {
   return (
     <div>
       <button onClick={decrement}>-</button>
-      <input type="text" value={quantity} onChange={e => setQuantity(e.target.value)}/>
+      <input type="text" value={quantity} onChange={e => setQuantity(Number(e.target.value))}/>
       <button onClick={increment}>+</button>
     </div>
   )
