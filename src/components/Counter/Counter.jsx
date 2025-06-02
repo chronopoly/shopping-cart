@@ -1,22 +1,19 @@
-import { useState } from "react";
-
-const Counter = () => {
-  const [count, setCount] = useState(1);
+const Counter = ({ quantity, setQuantity }) => {
 
   const increment = () => {
-    let newCount = Number(count);
-    setCount(newCount + 1);
+    let newCount = Number(quantity);
+    setQuantity(newCount + 1);
   }
 
   const decrement = () => {
-    let newCount = Number(count);
-    setCount(newCount - 1);
+    let newCount = Number(quantity);
+    setQuantity(newCount - 1);
   }
 
   return (
     <div>
       <button onClick={decrement}>-</button>
-      <input type="text" value={count} onChange={e => setCount(e.target.value)}/>
+      <input type="text" value={quantity} onChange={e => setQuantity(e.target.value)}/>
       <button onClick={increment}>+</button>
     </div>
   )
