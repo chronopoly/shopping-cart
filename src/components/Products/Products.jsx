@@ -3,14 +3,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import styles from "./Products.module.css";
 
-const Products = ({ handleCartUpdate }) => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then(response => response.json())
-      .then(response => setProducts(response));
-  }, []);
+const Products = ({ products, handleCartUpdate }) => {
 
   return (
     <>

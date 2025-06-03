@@ -4,7 +4,7 @@ import Counter from "../Counter/Counter";
 import styles from "./ProductCard.module.css";
 
 const ProductCard = ({ info, handleCartUpdate }) => {
-  const [itemQuantity, setItemQuantity] = useState(1);
+  const [itemQuantity, setItemQuantity] = useState(info.quantity || 1);
   
   const handleButtonClick = () => {
     const newInfo = {...info};

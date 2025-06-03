@@ -10,9 +10,28 @@ import Homepage from '../Homepage/Homepage'
 function App() {
   const { name } = useParams();
   const [cart, setCart] = useState([]);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then(response => response.json())
+      .then(response => setProducts(response));
+  }, []);
+
 
   const handleCartUpdate = (newItem) => {
     const newCart = cart.slice();
+    const newProducts = products.slice();
+
+    newProducts.forEach(product => {
+      if (newItem.id === product.id) {
+        product.quantity = newItem.quantity;
+      }
+    });
+
+    setProducts(newProducts);
+    console.log(newProducts);
+
     newCart.forEach(item => {
       if (newItem.id === item.id ) {
         item.quantity = newItem.quantity;
@@ -31,9 +50,9 @@ function App() {
     <>
       <Navbar />
       {name === "products" ? (
-        <Products handleCartUpdate={handleCartUpdate} />
+        <Products products={products} handleCartUpdate={handleCartUpdate} />
       ) : name === "cart" ? (
-        <Cart /> 
+        <Cart items={cart} /> 
       ) : (
         <Homepage />
       )}

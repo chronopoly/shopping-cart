@@ -1,6 +1,9 @@
-const Cart = () => {
+const Cart = ({ items }) => {
   return (
-    <h1>This is a cart</h1>
+    <div>
+      <h1>This is a cart</h1>
+      {items.map(item => <h3 key={item.id}>{item.title} - {item.quantity}</h3>)}
+    </div>
   )
 };
 
