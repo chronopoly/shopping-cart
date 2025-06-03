@@ -7,11 +7,10 @@ const ProductCard = ({ info, handleCartUpdate }) => {
   const [itemQuantity, setItemQuantity] = useState(1);
   
   const handleButtonClick = () => {
-    console.log(itemQuantity);
-    const newItem = {
-      id: info.id,
-      quantity: itemQuantity};
-    handleCartUpdate(newItem);
+    const newInfo = {...info};
+    newInfo.quantity = itemQuantity;
+    console.log(newInfo);
+    handleCartUpdate(newInfo);
   }
 
   return (
