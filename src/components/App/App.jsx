@@ -30,7 +30,6 @@ function App() {
     });
 
     setProducts(newProducts);
-    console.log(newProducts);
 
     newCart.forEach(item => {
       if (newItem.id === item.id ) {
@@ -42,9 +41,17 @@ function App() {
       newCart.push(newItem);
       setCart(newCart);
     }
+  };
 
-    console.log(newCart);
-  }
+  const removeFromCart = (itemId) => {
+    const newCart = [...cart];
+    newCart.forEach((item, index) => {
+      if (itemId === item.id) {
+        newCart.splice(index, 1);
+        setCart(newCart);
+      }
+    })  
+  };
 
   return (
     <>
@@ -52,7 +59,7 @@ function App() {
       {name === "products" ? (
         <Products products={products} handleCartUpdate={handleCartUpdate} />
       ) : name === "cart" ? (
-        <Cart items={cart} handleCartUpdate={handleCartUpdate} /> 
+        <Cart items={cart} handleCartUpdate={handleCartUpdate} removeFromCart={removeFromCart} /> 
       ) : (
         <Homepage />
       )}
