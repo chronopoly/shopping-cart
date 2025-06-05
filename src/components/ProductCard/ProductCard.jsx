@@ -24,6 +24,7 @@ const ProductCard = ({ info, handleCartUpdate, type="product" }) => {
     <div className={styles.card}>
       <img src={info.image} alt="picture of a product" />
       <p>{info.title}</p>
+      <p>Price: {type === "cart" ? info.quantity * info.price : info.price}</p>
       <Counter quantity={itemQuantity} setQuantity={type === "cart" ? handleCounterChange : setItemQuantity} />
       {type === "product" ? <button onClick={handleButtonClick}>Add to cart</button> : null}
     </div>
