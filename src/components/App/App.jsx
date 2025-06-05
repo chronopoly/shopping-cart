@@ -52,7 +52,7 @@ function App() {
       {name === "products" ? (
         <Products products={products} handleCartUpdate={handleCartUpdate} />
       ) : name === "cart" ? (
-        <Cart items={cart} /> 
+        <Cart items={cart} handleCartUpdate={handleCartUpdate} /> 
       ) : (
         <Homepage />
       )}
