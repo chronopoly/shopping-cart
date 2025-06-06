@@ -55,7 +55,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar numberOfItems={cart.length} />
       {name === "products" ? (
         <Products products={products} handleCartUpdate={handleCartUpdate} />
       ) : name === "cart" ? (
