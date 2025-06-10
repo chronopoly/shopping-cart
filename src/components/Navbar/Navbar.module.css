@@ -1,5 +1,17 @@
+nav {
+  padding: 8px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 ul {
   display: flex;
   justify-content: center;
   gap: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
