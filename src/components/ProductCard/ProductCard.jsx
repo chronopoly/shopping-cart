@@ -25,11 +25,11 @@ const ProductCard = ({ info, handleCartUpdate, removeFromCart, type="product" })
   };
 
   return (
-    <div className={styles.card}>
+    <div className={type === "product" ? styles.productCard : styles.cartCard}>
       <img src={info.image} alt="picture of a product" />
       <p>{info.title}</p>
-      <p>Price: {type === "cart" ? info.quantity * info.price : info.price}</p>
       <Counter quantity={itemQuantity} setQuantity={type === "cart" ? handleCounterChange : setItemQuantity} />
+      <p>Price: {type === "cart" ? info.quantity * info.price : info.price}</p>
       {type === "product" ? <button onClick={handleButtonClick}>Add to cart</button> : <button onClick={handleRemoveButton}>X</button>}
     </div>
   )

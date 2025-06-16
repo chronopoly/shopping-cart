@@ -3,6 +3,16 @@ img {
   max-height: 260px;
 }
 
-.card {
+.productCard {
   background-color: #ffff;
+}
+
+.cartCard {
+  background-color: #ffff;
+  display: flex;
+  align-items: center;
+}
+
+.cartCard img {
+  max-width: 80px;
 }

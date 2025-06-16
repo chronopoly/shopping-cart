@@ -1,3 +1,4 @@
+import styles from "./Cart.module.css"
 import ProductCard from "../ProductCard/ProductCard";
 
 const Cart = ({ items, handleCartUpdate, removeFromCart }) => {
@@ -7,11 +8,13 @@ const Cart = ({ items, handleCartUpdate, removeFromCart }) => {
   });
 
   return (
-    <div>
-      <h1>This is a cart</h1>
-      <h2>Total cost: ${total} </h2>
-      {items.map(item => <ProductCard info={item} handleCartUpdate={handleCartUpdate} removeFromCart={removeFromCart} type="cart" />)}
-      
+    <div className={styles.cart}>
+      <div className={styles.items}>
+        {items.map(item => <ProductCard info={item} handleCartUpdate={handleCartUpdate} removeFromCart={removeFromCart} type="cart" />)}
+      </div>
+      <div className={styles.summary}>
+        Order summary: ${total}
+      </div>
     </div>
   )
 };
