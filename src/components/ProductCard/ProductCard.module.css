@@ -4,22 +4,30 @@ img {
 }
 
 .productCard {
-  background-color: #ffff;
+  background-color: #fefefe;
 }
 
 .cartCard {
-  background-color: #ffff;
+  background-color: #fefefe;
+  border: 1px solid #727a82;
+  border-radius: 18px;
+  padding: 8px 16px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
+  height: 125px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .cartCard img {
   max-width: 80px;
+  max-height: 100px;
 }
 
 .cartCard>.cartProductInfo {
+  color: #343a40;
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 /* target the counter and price elements */
@@ -28,6 +36,9 @@ img {
   justify-self: center;
 }
 
+.cartCard>p {
+  color: #343a40;
+}
 .deleteButton {
   align-self: center;
   justify-self: center;
@@ -36,7 +47,7 @@ img {
   font-weight: bold;
   display: flex;
   align-items: center;
-  background-color: #ffff;
+  background-color: #fefefe;
   border: none;
   padding: 2px 6px;
 }

@@ -27,11 +27,13 @@ const ProductCard = ({ info, handleCartUpdate, removeFromCart, type="product" })
   return (
     <div className={type === "product" ? styles.productCard : styles.cartCard}>
       <div className={styles.cartProductInfo}>
-        <img src={info.image} alt="picture of a product" />
+        <div className={styles.imageWrapper}>
+          <img src={info.image} alt="picture of a product" />
+        </div>
         <p>{info.title}</p>
       </div>
       <Counter quantity={itemQuantity} setQuantity={type === "cart" ? handleCounterChange : setItemQuantity} />
-      <p>Price: {type === "cart" ? info.quantity * info.price : info.price}</p>
+      <p>${type === "cart" ? info.quantity * info.price : info.price}</p>
       {type === "product" ? <button onClick={handleButtonClick}>Add to cart</button> : <button className={styles.deleteButton} onClick={handleRemoveButton}>Delete</button>}
     </div>
   )
