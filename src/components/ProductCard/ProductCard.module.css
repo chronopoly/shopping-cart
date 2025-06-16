@@ -9,15 +9,28 @@ img {
 
 .cartCard {
   background-color: #ffff;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
 }
 
 .cartCard img {
   max-width: 80px;
 }
 
+.cartCard>.cartProductInfo {
+  display: flex;
+  align-items: center;
+}
+
+/* target the counter and price elements */
+.cartCard>div:nth-of-type(2), .cartCard>p {
+  align-self: center;
+  justify-self: center;
+}
+
 .deleteButton {
+  align-self: center;
+  justify-self: center;
   font-size: 16px;
   color: #727a82;
   font-weight: bold;
