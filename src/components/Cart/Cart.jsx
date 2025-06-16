@@ -10,6 +10,7 @@ const Cart = ({ items, handleCartUpdate, removeFromCart }) => {
   return (
     <div className={styles.cart}>
       <div className={styles.items}>
+        <h1>Shopping cart</h1>
         {items.map(item => <ProductCard info={item} handleCartUpdate={handleCartUpdate} removeFromCart={removeFromCart} type="cart" />)}
       </div>
       <div className={styles.summary}>
