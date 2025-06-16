@@ -1,3 +1,5 @@
+import styles from './Counter.module.css'
+
 const Counter = ({ quantity, setQuantity }) => {
 
   const increment = () => {
@@ -11,9 +13,9 @@ const Counter = ({ quantity, setQuantity }) => {
   }
 
   return (
-    <div>
+    <div className={styles.counter}>
       <button onClick={decrement}>-</button>
-      <input type="text" value={quantity} onChange={e => setQuantity(Number(e.target.value))}/>
+      <input type="text" size="2" maxLength="10" value={quantity} onChange={e => setQuantity(Number(e.target.value))}/>
       <button onClick={increment}>+</button>
     </div>
   )
