@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
-import './App.css'
+import styles from './App.module.css'
 import Navbar from '../Navbar/Navbar'
 import Products from '../Products/Products'
 import Cart from '../Cart/Cart'

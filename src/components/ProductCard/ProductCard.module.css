@@ -2,3 +2,7 @@ img {
   max-width: 230px;
   max-height: 260px;
 }
+
+.card {
+  background-color: #ffff;
+}
