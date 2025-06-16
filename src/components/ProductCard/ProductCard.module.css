@@ -16,3 +16,22 @@ img {
 .cartCard img {
   max-width: 80px;
 }
+
+.deleteButton {
+  font-size: 16px;
+  color: #727a82;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  background-color: #ffff;
+  border: none;
+  padding: 2px 6px;
+}
+
+.deleteButton::before {
+  content: url(../../icons/delete-icon.svg);
+}
+
+.deleteButton:hover {
+  cursor: pointer;
+}
