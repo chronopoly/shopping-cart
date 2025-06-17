@@ -41,10 +41,12 @@
 
 .summary {
   flex: 3;
+  max-height: 400px;
 }
 
 .payment {
   flex: 1;
+  max-height: 200px;
 }
 
 .coupon {
