@@ -20,7 +20,10 @@ const Cart = ({ items, handleCartUpdate, removeFromCart }) => {
             <input type="text" placeholder="Enter your coupon code"/>
             <button>Apply your discount</button>
           </div>
-          Order summary: ${total}
+          <h1>Order Summary</h1>
+          <p>Discount: <span>$0.0</span></p>
+          <p>Delivery: <span>$49.99</span></p>
+          <p>Total: <span className={styles.total}>${(total + 49.99).toFixed(2)}</span></p>
         </div>
         <div className={styles.payment}>
           Pay here
