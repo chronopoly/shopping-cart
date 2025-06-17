@@ -87,3 +87,33 @@
   font-size: 1.1em;
   font-weight: bold;
 }
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.payment div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment label {
+  color: #343a40;
+  margin-right: 12px;
+}
+
+.payment button {
+  color: #fefefe;
+  border: none;
+  padding: 12px 42px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  background-color: slateblue;
+}
+
+.payment button:hover {
+  cursor: pointer;
+}
