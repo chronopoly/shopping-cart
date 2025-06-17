@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import styles from "./Navbar.module.css"
 
+import ShoppingCartIcon from "../../icons/ShoppingCartIcon";
+
 const Navbar = ({ numberOfItems }) => {
   return (
     <nav>
@@ -9,7 +11,10 @@ const Navbar = ({ numberOfItems }) => {
         <Link to={"/"}>Home</Link>
         <Link to={"/products/"}>Products</Link>
       </ul>
-      <div><Link to={"/cart/"}>Cart {numberOfItems > 0 ? ` (${numberOfItems} items)` : null}</Link></div>
+        <Link to={"/cart/"}>
+          <ShoppingCartIcon />
+          {numberOfItems === 0 ? null : <span className={styles.itemsNumber}>{numberOfItems}</span>}
+        </Link>
     </nav>
   )
 };

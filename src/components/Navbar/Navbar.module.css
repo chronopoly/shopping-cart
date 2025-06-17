@@ -16,3 +16,23 @@ a {
   text-decoration: none;
   color: black;
 }
+
+nav svg {
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.itemsNumber {
+  color: #fefefe;
+  text-align: center;
+  padding: 4px;
+  width:  15px;
+  height: 15px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: slateblue;
+  display: inline-block;
+  transform: translate(-8px, -20px);
+  
+}
