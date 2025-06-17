@@ -13,8 +13,19 @@ const Cart = ({ items, handleCartUpdate, removeFromCart }) => {
         <h1>Shopping cart</h1>
         {items.map(item => <ProductCard info={item} handleCartUpdate={handleCartUpdate} removeFromCart={removeFromCart} type="cart" />)}
       </div>
-      <div className={styles.summary}>
-        Order summary: ${total}
+      <div className={styles.checkout}>
+        <div className={styles.summary}>
+          <div className={styles.coupon}>
+            <h1>Discount Coupon</h1>
+            <input type="text" placeholder="Enter your coupon code"/>
+            <button>Apply your discount</button>
+          </div>
+          Order summary: ${total}
+        </div>
+        <div className={styles.payment}>
+          Pay here
+        </div>
+        
       </div>
     </div>
   )

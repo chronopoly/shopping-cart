@@ -1,11 +1,16 @@
-.cart h1 {
+.cart h1, .cart h2 {
+  margin: 0;
   color: #343a40;
   padding-bottom: 18px;
   border-bottom: 2px solid #919ba5;
 }
 
+.cart input {
+  display: block;
+}
+
 .cart {
-  padding: 42px;
+  padding: 42px 100px;
   display: flex;
   gap: 32px;
 }
@@ -20,7 +25,50 @@
   gap: 18px;
 }
 
-.summary {
-  background-color: #ffff;
+.checkout {
+  background-color: #f6f6f6;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.summary, .payment {
+  padding: 42px;
+  background-color: #fefefe;
+  border-radius: 18px;
+}
+
+.summary {
+  flex: 3;
+}
+
+.payment {
+  flex: 1;
+}
+
+.coupon {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.coupon input {
+  font-size: 1.1em;
+  padding: 12px 24px;
+  background-color: #f6f6f6;
+  border: none;
+  border-radius: 8px;
+}
+
+.coupon button {
+  font-size: 1.1em;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid slateblue;
+  background-color: #fefefe;
+}
+
+.coupon button:hover {
+  cursor: pointer;
 }
