@@ -34,7 +34,7 @@ const ProductCard = ({ info, handleCartUpdate, removeFromCart, type="product" })
       </div>
       <Counter quantity={itemQuantity} setQuantity={type === "cart" ? handleCounterChange : setItemQuantity} />
       <p>${type === "cart" ? (info.quantity * info.price).toFixed(2) : info.price}</p>
-      {type === "product" ? <button onClick={handleButtonClick}>Add to cart</button> : <button className={styles.deleteButton} onClick={handleRemoveButton}>Delete</button>}
+      {type === "product" ? <button className={styles.addButton} onClick={handleButtonClick}>Add to cart</button> : <button className={styles.deleteButton} onClick={handleRemoveButton}>Delete</button>}
     </div>
   )
 };
