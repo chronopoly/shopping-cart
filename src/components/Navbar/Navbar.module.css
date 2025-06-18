@@ -13,8 +13,16 @@ ul {
 }
 
 a {
+  padding: 10px;
   text-decoration: none;
-  color: #343a40;
+  color: #343a40; 
+  display: flex;
+  border-radius: 12px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+a:hover {
+  background-color: #aab0b6;
 }
 
 nav svg {
@@ -33,6 +41,7 @@ nav svg {
   border-radius: 50px;
   background-color: slateblue;
   display: inline-block;
-  transform: translate(-10px, -8px);
+  transform: translate(15px, -9px);
   position:absolute;
 }
+
