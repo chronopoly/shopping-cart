@@ -19,7 +19,7 @@ a {
   color: #343a40; 
   display: flex;
   border-radius: 12px;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.3s ease-out;
 }
 
 a:hover {
