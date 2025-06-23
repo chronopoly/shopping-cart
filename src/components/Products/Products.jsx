@@ -7,7 +7,6 @@ const Products = ({ products, handleCartUpdate }) => {
 
   return (
     <>
-      <h1>This is a page with products</h1>
       <div className={styles.productContainer}>
         {products.map(product => <ProductCard info={product} key={product.id} handleCartUpdate={handleCartUpdate}/>)}
       </div>
