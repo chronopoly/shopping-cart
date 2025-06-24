@@ -8,6 +8,8 @@ nav {
 }
 
 ul {
+  padding: 0;
+  margin-right: 60px;
   display: flex;
   justify-content: center;
   gap: 12px;
@@ -46,3 +48,12 @@ nav svg {
   position:absolute;
 }
 
+.logo {
+  color: slateblue;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.logo:hover {
+  background: none;
+}
