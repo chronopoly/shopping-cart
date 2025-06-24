@@ -42,7 +42,7 @@ nav svg {
   font-size: 10px;
   font-weight: bold;
   border-radius: 50px;
-  background-color: slateblue;
+  background-color: #ffc107;
   display: inline-block;
   transform: translate(15px, -9px);
   position:absolute;
