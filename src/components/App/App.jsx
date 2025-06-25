@@ -53,13 +53,22 @@ function App() {
     })  
   };
 
+  const clearCart = () => {
+    const newProducts = [...products];
+    newProducts.forEach(product => {
+      product.quantity = 1;
+    });
+    setProducts(newProducts);
+    setCart([]);
+  };
+
   return (
     <>
       <Navbar numberOfItems={cart.length} />
       {name === "products" ? (
         <Products products={products} handleCartUpdate={handleCartUpdate} />
       ) : name === "cart" ? (
-        <Cart items={cart} handleCartUpdate={handleCartUpdate} removeFromCart={removeFromCart} /> 
+        <Cart items={cart} handleCartUpdate={handleCartUpdate} removeFromCart={removeFromCart} clearCart={clearCart} /> 
       ) : (
         <Homepage />
       )}

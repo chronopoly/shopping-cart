@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom"
 import styles from "./Cart.module.css"
 import ProductCard from "../ProductCard/ProductCard";
 
-const Cart = ({ items, handleCartUpdate, removeFromCart }) => {
+const Cart = ({ items, handleCartUpdate, removeFromCart, clearCart }) => {
   let total = 0;
   items.forEach(item => {
     total += item.quantity * item.price;
@@ -12,6 +13,10 @@ const Cart = ({ items, handleCartUpdate, removeFromCart }) => {
       <div className={styles.items}>
         <h1>Shopping cart</h1>
         {items.map(item => <ProductCard info={item} handleCartUpdate={handleCartUpdate} removeFromCart={removeFromCart} type="cart" />)}
+        <div>
+          <button><Link to={"/products/"}>Continue shopping</Link></button>
+          <button onClick={clearCart}>Clear cart</button>
+        </div>
       </div>
       <div className={styles.checkout}>
         <div className={styles.summary}>
