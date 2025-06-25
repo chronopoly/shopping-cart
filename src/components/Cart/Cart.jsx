@@ -13,8 +13,8 @@ const Cart = ({ items, handleCartUpdate, removeFromCart, clearCart }) => {
       <div className={styles.items}>
         <h1>Shopping cart</h1>
         {items.map(item => <ProductCard info={item} handleCartUpdate={handleCartUpdate} removeFromCart={removeFromCart} type="cart" />)}
-        <div>
-          <button><Link to={"/products/"}>Continue shopping</Link></button>
+        <div className={styles.buttons}>
+          <Link to={"/products/"}>{<button>Continue shopping</button>}</Link>
           <button onClick={clearCart}>Clear cart</button>
         </div>
       </div>
