@@ -15,7 +15,7 @@ ul {
   gap: 12px;
 }
 
-a {
+nav a {
   padding: 10px;
   text-decoration: none;
   color: #343a40; 
@@ -24,7 +24,7 @@ a {
   transition: background-color 0.3s ease-out;
 }
 
-a:hover {
+nav a:hover {
   background-color: #aab0b6;
 }
 
